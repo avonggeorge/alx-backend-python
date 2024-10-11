@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Module for a concatenation function with type annotations.
+"""Module for concatination.
 """
 
 def concat(str1: str, str2: str) -> str:
