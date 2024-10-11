@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
-"""Task 100 Advanced"""
-from typing import Sequence, Any, Union
+'''Task 10's module.
+'''
+from typing import Any, Sequence, Union
+
 
 def safe_first_element(lst: Sequence[Any]) -> Union[Any, None]:
-    """Return the first element of a sequence or None if the sequence is empty."""
+    '''Retrieves the first element of a sequence if it exists.
+    '''
     if lst:
         return lst[0]
     else:
