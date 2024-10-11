@@ -1,12 +1,17 @@
 #!/usr/bin/env python3
-"""Task 101 Advanced"""
-from typing import Mapping, Any, Union, TypeVar
+'''Task 11's module.
+'''
+from typing import Any, Mapping, Union, TypeVar
 
-# Define a type variable
+
 T = TypeVar('T')
+Res = Union[Any, T]
+Def = Union[T, None]
 
-def safely_get_value(dct: Mapping[Any, T], key: Any, default: Union[T, None] = None) -> Union[T, None]:
-    """Return the value associated with the key in the dictionary, or the default value if the key is not found."""
+
+def safely_get_value(dct: Mapping, key: Any, default: Def = None) -> Res:
+    '''Retrieves a value from a dict using a given key.
+    '''
     if key in dct:
         return dct[key]
     else:
